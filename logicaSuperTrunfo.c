@@ -16,7 +16,8 @@
  *
  */
 
-int main() {
+int main()
+{
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
 
@@ -29,13 +30,12 @@ int main() {
     float pib_1, pib_2;
     int nPTuristicos_1, nPTuristicos_2;
 
-    //intermediario - Variveis adicionais
+    // intermediario - Variveis adicionais
     float densidadePopulacional1, densidadePopulacional2;
     float pibPerCapita1, pibPerCapita2;
 
-    //Mestre - Variavel adicional
-    //float superPoder_1, superPoder_2;
-
+    // Mestre - Variavel adicional
+    // float superPoder_1, superPoder_2;
 
     // Cadastro das Cartas:
     // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
@@ -119,22 +119,21 @@ int main() {
 
     //----------------------------------------------------------------------------------------;
 
-    //Calculos de densidade populacional e PIB per capita;
+    // Calculos de densidade populacional e PIB per capita;
 
-    //Calculo carta 1
-    densidadePopulacional1 = (float) nPopulacao_1 / areaCid_1; //Densidade populacional;
+    // Calculo carta 1
+    densidadePopulacional1 = (float)nPopulacao_1 / areaCid_1; // Densidade populacional;
 
-    pibPerCapita1 = (float) pib_1 / nPopulacao_1; //PIB per Capita;
+    pibPerCapita1 = (float)pib_1 / nPopulacao_1; // PIB per Capita;
 
-    //calculo carta2
-    densidadePopulacional2 = (float) nPopulacao_2 / areaCid_2; //Densidade populacional;
+    // calculo carta2
+    densidadePopulacional2 = (float)nPopulacao_2 / areaCid_2; // Densidade populacional;
 
-    pibPerCapita2 = (float) pib_2 / nPopulacao_2; //PIB per Capita;
+    pibPerCapita2 = (float)pib_2 / nPopulacao_2; // PIB per Capita;
 
     //----------------------------------------------------------------------------------------;
 
-
-    //MENU
+    // MENU
     int escolherAtributo;
 
     printf("-----------------------------MENU----------------------------------\n");
@@ -157,117 +156,140 @@ int main() {
     scanf("%d", &escolherAtributo);
     printf("\n");
 
+    switch (escolherAtributo)
+    {
+    case 1:
+        printf("Cidade carta 1: %s\n", nCidade1);
+        printf("Cidade carta 2: %s\n", nCidade2);
+        break;
+    case 2:
+        printf("Cidade carta 1: %s\n", nCidade1);
+        printf("Cidade carta 2: %s\n", nCidade2);
+        printf("Atributo comparado: Número de habitantes\n");
+        printf("Nº habitantes da carta 1: %d\n", nPopulacao_1);
+        printf("Nº habitantes da carta 2: %d\n", nPopulacao_2);
+        break;
+    case 3:
+        printf("Cidade carta 1: %s\n", nCidade1);
+        printf("Cidade carta 2: %s\n", nCidade2);
+        printf("Atributo comparado: Área em km² da cidade\n");
+        printf("Área km² da carta 1: %d\n", areaCid_1);
+        printf("Área km² da carta 2: %d\n", areaCid_2);
+        break;
+    case 4:
+        printf("Cidade carta 1: %s\n", nCidade1);
+        printf("Cidade carta 2: %s\n", nCidade2);
+        printf("Atributo comparado: PIB da cidade\n");
+        printf("PIB da carta 1: %f\n", pib_1);
+        printf("PIB da carta 2: %f\n", pib_2);
+        break;
+    case 5:
+        printf("Cidade carta 1: %s\n", nCidade1);
+        printf("Cidade carta 2: %s\n", nCidade2);
+        printf("Atributo comparado: Número de pontos turísticos da cidade\n");
+        printf("Nº de pontos turísticos da carta 1: %d\n", nPTuristicos_1);
+        printf("Nº de pontos turísticos da carta 2: %d\n", nPTuristicos_2);
+    case 6:
+        printf("Cidade carta 1: %s\n", nCidade1);
+        printf("Cidade carta 2: %s\n", nCidade2);
+        printf("Atributo comparado: Densidade demográfica da cidade\n");
+        printf("Densidade demográfica da carta 1: %f\n", densidadePopulacional1);
+        printf("Densidade demográfica da carta 2: %f\n", densidadePopulacional2);
+        break;
 
-
-    switch (escolherAtributo) {
-        case 1:
-            printf("Cidade carta 1: %s\n", nCidade1);
-            printf("Cidade carta 2: %s\n", nCidade2);
-        break;
-        case 2:
-            printf("Cidade carta 1: %s\n", nCidade1);
-            printf("Cidade carta 2: %s\n", nCidade2);
-            printf("Atributo comparado: Número de habitantes\n");
-            printf("Nº habitantes da carta 1: %d\n", nPopulacao_1);
-            printf("Nº habitantes da carta 2: %d\n", nPopulacao_2);
-        break;
-        case 3:
-            printf("Cidade carta 1: %s\n", nCidade1);
-            printf("Cidade carta 2: %s\n", nCidade2);
-            printf("Atributo comparado: Área em km² da cidade\n");
-            printf("Área km² da carta 1: %d\n", areaCid_1);
-            printf("Área km² da carta 2: %d\n", areaCid_2);
-        break;
-        case 4:
-            printf("Cidade carta 1: %s\n", nCidade1);
-            printf("Cidade carta 2: %s\n", nCidade2);
-            printf("Atributo comparado: PIB da cidade\n");
-            printf("PIB da carta 1: %f\n", pib_1);
-            printf("PIB da carta 2: %f\n", pib_2);
-        break;
-        case 5:
-            printf("Cidade carta 1: %s\n", nCidade1);
-            printf("Cidade carta 2: %s\n", nCidade2);
-            printf("Atributo comparado: Número de pontos turísticos da cidade\n");
-            printf("Nº de pontos turísticos da carta 1: %d\n", nPTuristicos_1);
-            printf("Nº de pontos turísticos da carta 2: %d\n", nPTuristicos_2);
-        case 6:
-            printf("Cidade carta 1: %s\n", nCidade1);
-            printf("Cidade carta 2: %s\n", nCidade2);
-            printf("Atributo comparado: Densidade demográfica da cidade\n");
-            printf("Densidade demográfica da carta 1: %f\n", densidadePopulacional1);
-            printf("Densidade demográfica da carta 2: %f\n", densidadePopulacional2);
-        break;
-
-        default: //Mensagem padrão para entrada inválida
-            printf("Entrada inválida, não existe essa opção!");
-
+    default: // Mensagem padrão para entrada inválida
+        printf("Entrada inválida, não existe essa opção!");
     }
 
-    if (escolherAtributo > 6 && escolherAtributo == 0) {
+    if (escolherAtributo > 6 && escolherAtributo == 0)
+    {
         printf("+++ OPÇÃO INVÁLIDA +++\n");
-    } else if (escolherAtributo == 2) {
+    }
+    else if (escolherAtributo == 2)
+    {
 
-        //Comparação de dado populacional
+        // Comparação de dado populacional
         if (nPopulacao_1 > nPopulacao_2)
         {
             printf("Resultado: Carta (%s) venceu!\n", numCarta1);
-        } else if (nPopulacao_1 < nPopulacao_2) {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
-        } else {
-            printf("EMPATE!");
         }
-
-    } else if (escolherAtributo == 3) {
-
-        //Comparação de dado de área
-        if (areaCid_1 > areaCid_2)
+        else if (nPopulacao_1 < nPopulacao_2)
         {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
-        } else if (areaCid_1 < areaCid_2) {
             printf("Resultado: Carta (%s) venceu!\n", numCarta2);
-        } else {
-            printf("EMPATE!");
         }
-
-    } else if (escolherAtributo == 4) {
-
-        //Comparação de dado de área
-        if (pib_1 > pib_2)
+        else
         {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
-        } else if (pib_1 < pib_2) {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
-        } else {
-            printf("EMPATE!");
-        }
-
-    } else if (escolherAtributo == 5) {
-
-        //Comparação de dado de Ponto turisticos
-        if (nPTuristicos_1 > nPTuristicos_2)
-        {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
-        } else if (nPTuristicos_1 < nPTuristicos_2) {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
-        } else {
-            printf("EMPATE!");
-        }
-    } else if (escolherAtributo == 6) {
-
-        //Comparação de dado de densidade demografica
-        if (densidadePopulacional1 < densidadePopulacional2)
-        {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
-        } else if (densidadePopulacional1 > densidadePopulacional2) {
-            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
-        } else {
             printf("EMPATE!");
         }
     }
+    else if (escolherAtributo == 3)
+    {
 
+        // Comparação de dado de área
+        if (areaCid_1 > areaCid_2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
+        }
+        else if (areaCid_1 < areaCid_2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
+        }
+        else
+        {
+            printf("EMPATE!");
+        }
+    }
+    else if (escolherAtributo == 4)
+    {
 
-    
+        // Comparação de dado de área
+        if (pib_1 > pib_2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
+        }
+        else if (pib_1 < pib_2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
+        }
+        else
+        {
+            printf("EMPATE!");
+        }
+    }
+    else if (escolherAtributo == 5)
+    {
+
+        // Comparação de dado de Ponto turisticos
+        if (nPTuristicos_1 > nPTuristicos_2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
+        }
+        else if (nPTuristicos_1 < nPTuristicos_2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
+        }
+        else
+        {
+            printf("EMPATE!");
+        }
+    }
+    else if (escolherAtributo == 6)
+    {
+
+        // Comparação de dado de densidade demografica
+        if (densidadePopulacional1 < densidadePopulacional2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta1);
+        }
+        else if (densidadePopulacional1 > densidadePopulacional2)
+        {
+            printf("Resultado: Carta (%s) venceu!\n", numCarta2);
+        }
+        else
+        {
+            printf("EMPATE!");
+        }
+    }
 
     system("pause");
     return 0;
